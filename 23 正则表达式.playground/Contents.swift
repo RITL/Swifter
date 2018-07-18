@@ -35,8 +35,8 @@ infix operator =~: MathPrecedence
 
 func =~(lhs: String, rhs: String) -> Bool {
     do {
-        return try RegexHelper(rhs).match(rhs)
-    }catch _ {
+        return try RegexHelper(rhs).match(lhs)
+    }catch {
         return false
     }
 }
@@ -45,6 +45,8 @@ func =~(lhs: String, rhs: String) -> Bool {
 
 if "yuexiaowen108@gmail.com" =~ "^([a-z0-9_\\.-]+)@([\\da-z\\.-]+)\\.([a-z\\.]{2,6})$" {
     print("有效的邮箱地址")
+}else {
+    print("无效的邮箱地址")
 }
 
 
