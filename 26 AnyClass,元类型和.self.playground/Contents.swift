@@ -81,7 +81,7 @@ tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
 // 对于Protocol来说，有时候也会想取得协议的元类型
 // 可以在某个 protocol 的名字后使用.Protocol来获取，使用方法和.Type是类似的。
 
-
+// 个人思考: .Type 就是像一个类的类型(重点是类型) .self就是获得这个类的类型(重点在于获得)
 
 
 
