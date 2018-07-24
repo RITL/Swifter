@@ -83,7 +83,17 @@ tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
 
 // 个人思考: .Type 就是像一个类的类型(重点是类型)(是一个类对象的类型) .self就是获得这个类的类型(重点在于获得)(一个类对象)
 
+protocol Test {
+    
+}
 
+func getClass(class: AnyClass) -> AnyClass {
+    
+    return `class`
+}
+
+print(getClass(class: MusicViewController.self as AnyClass))
+print(getClass(class: AlbumViewController.self))
 
 
 

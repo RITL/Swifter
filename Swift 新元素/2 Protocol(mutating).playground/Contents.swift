@@ -10,7 +10,7 @@ protocol Vehicle
     mutating func changedColor()
 }
 
-// 使用mutating修饰方法，在该方法中可以修改sruct或者enum的变量
+// 使用mutating修饰方法，在该方法中可以修改struct或者enum的变量
 
 struct MyCar: Vehicle {
     
