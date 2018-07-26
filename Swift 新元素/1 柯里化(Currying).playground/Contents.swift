@@ -80,3 +80,6 @@ class Control {
 }
 
 
+let r:Range = 1..<3
+
+
