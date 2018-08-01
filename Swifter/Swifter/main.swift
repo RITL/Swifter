@@ -25,58 +25,41 @@ protocol MyProtocol {
 
 
 extension MyProtocol {
-
+     func test() {
+        print("test in MyProtocol extension")
+    }
 }
 
 
 class MyClass {
-    init() {
 
+}
+
+extension MyClass: MyProtocol {
+    
+    @objc func test() {
+        print("test in MyClass extension")
     }
 }
 
-extension MyProtocol {
+class MyClass1 : MyClass {
     
+    override func test() {
+        print("test in Myclass1")
+    }
 }
 
-//extension NSObject {
-//     @objc dynamic func test() {
-//        print("test in extension")
-//    }
-//}
-//
-//extension MyClass {
-//
-//    @objc dynamic func test() {
-//        print("test in extension")
-//    }
-//}
-//
-//class MyClass1 : MyClass {
-//
-//    override func test() {
-//        print("test in Myclass1")
-//    }
-//}
-//
-//
-//
-//func model(type: Int) -> MyClass {
-//
-//    if type == 1 {
-//        return MyClass()
-//    }
-//
-//    return MyClass1()
-//}
-//
-//
-//let a = model(type: 1)
-//print(a.self)
-//a.test()
-////let type = type(of: a)
-//let D = (NSClassFromString("Swiftter.MyClass1"))
-////print("D = \(D)")
-//let b = model(type: 2)
-//b.test()
-//
+func model(type: Int) -> MyClass {
+
+    if type == 1 {
+        return MyClass()
+    }
+
+    return MyClass1()
+}
+
+let model1 = model(type: 1)
+let model2 = model(type: 2)
+model1.test()
+model2.test()
+
