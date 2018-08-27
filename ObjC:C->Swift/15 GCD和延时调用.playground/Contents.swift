@@ -32,7 +32,7 @@ workingQueue.async {
 }
 
 
-/*
+/*:
  因为 UIKit 是只能在主线程工作的
  
  如果在主线程进行繁重的工作的话，就会导致 app 出现 ‘卡死’的现象:
@@ -102,49 +102,7 @@ DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + time) {
  
  */
 
-typealias Task = (_ cancel: Bool) -> Void
-
-func delay(_ time: TimeInterval,task: @escaping ()->()) -> Task? {
-    
-    /// 使用 GCD 进行延时操作
-    func dispatch_later(block: @escaping ()->()){
-        let t = DispatchTime.now() + time
-        DispatchQueue.main.asyncAfter(deadline: t, execute: block)
-    }
-    
-    var closure: (()->Void)? = task//执行的闭包
-    var result: Task? //暂时排队的任务
-    
-    let delayClosure: Task = {//延时执行的任务
-        cancel in //是否取消
-        if let internalClosure = closure {
-            if cancel == false {
-                DispatchQueue.main.async(execute: internalClosure)//如果不取消并且任务存在，执行
-            }
-        }
-        closure = nil // 将所有变量置nil
-        result = nil
-    }
-    
-    result = delayClosure
-    
-    dispatch_later {
-        if let delayedClosure = result {
-            delayedClosure(false)
-        }
-    }
-    
-    return result
-}
-
-
-/// 取消
-func cancel(_ task: Task?){
-    task?(true)
-}
-
 // 想在 2秒 以后干点什么:
-
 delay(2) { print("2秒后输出") }
 
 // 想要取消的话，可以先保留一个 Task 的引用，然后调用 cancel:
