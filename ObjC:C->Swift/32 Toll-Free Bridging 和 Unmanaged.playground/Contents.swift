@@ -103,6 +103,8 @@ AudioServicesCreateSystemSoundID(fileURL!, &theSoundID)
  一般来说使用起来是这样的(当然这些 API 都是虚构的)：
  */
 
+typealias Something = UnmanagedInt
+
 func CFGetSomething() -> Unmanaged<Something>
 func CFCreateSomething() -> Unmanaged<Something>
 // 两者都没有进行标注，Create 中进行了创建
