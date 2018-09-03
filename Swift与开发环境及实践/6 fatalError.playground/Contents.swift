@@ -133,3 +133,5 @@ TheirClass().methodMustBeImplementedInSubClass()
 required init(coder: NSCoder){
     fatalError("NSCoding not supported")
 }
+
+// 来避免编译错误
