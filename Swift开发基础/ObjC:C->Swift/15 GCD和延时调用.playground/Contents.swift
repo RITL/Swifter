@@ -1,6 +1,8 @@
 //: Playground - noun: a place where people can play
 
 import UIKit
+import PlaygroundSupport
+PlaygroundPage.current.needsIndefiniteExecution = true
 
 /*
  GCD 是一种非常方便的使用多线程的方式
