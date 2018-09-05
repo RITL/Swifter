@@ -18,6 +18,26 @@ import Foundation
 //
 //print("\(arr1)")
 
+let sequece = "hello".map{ ($0,1) }
+
+//uniquingKeysWith
+
+print(sequece)
+let d = Dictionary(sequece, uniquingKeysWith: { (value1, value2) -> Int in
+    print("value1 = \(value1),value2 = \(value2)")
+    return value1 + value2
+})
+
+print("d = \(d)")
+
+//
+//Dictionary("hello".map {($0,1)}), { (value1, value2) -> _ in
+//
+//    print("value1 = \(value1),value2 = \(value2)")
+//
+//    return value1
+//}
+
 
 protocol MyProtocol {
     func test()
