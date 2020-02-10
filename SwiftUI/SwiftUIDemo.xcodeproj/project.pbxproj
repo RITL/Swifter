@@ -7,18 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DB0548B5232208F700E582F8 /* CalculatorButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0548B4232208F700E582F8 /* CalculatorButton.swift */; };
-		DB0548B72322097900E582F8 /* CalculatorButtonRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0548B62322097900E582F8 /* CalculatorButtonRow.swift */; };
-		DB0548B923220D0100E582F8 /* CalculatorButtonPad.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0548B823220D0100E582F8 /* CalculatorButtonPad.swift */; };
 		DB3C6009231CA9A100427280 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3C6008231CA9A100427280 /* AppDelegate.swift */; };
 		DB3C600B231CA9A100427280 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3C600A231CA9A100427280 /* SceneDelegate.swift */; };
-		DB3C600D231CA9A100427280 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3C600C231CA9A100427280 /* ContentView.swift */; };
 		DB3C600F231CA9A200427280 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB3C600E231CA9A200427280 /* Assets.xcassets */; };
 		DB3C6012231CA9A200427280 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB3C6011231CA9A200427280 /* Preview Assets.xcassets */; };
 		DB3C6015231CA9A200427280 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB3C6013231CA9A200427280 /* LaunchScreen.storyboard */; };
 		DB3C6020231CA9A300427280 /* SwiftUIDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3C601F231CA9A300427280 /* SwiftUIDemoTests.swift */; };
 		DB3C602B231CA9A300427280 /* SwiftUIDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3C602A231CA9A300427280 /* SwiftUIDemoUITests.swift */; };
-		DBE37758231E4DE600F445AA /* CalculatorButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE37757231E4DE600F445AA /* CalculatorButtonItem.swift */; };
+		DBAD0FB323CF0931004B3DD0 /* CalculatorButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBAD0FB223CF0931004B3DD0 /* CalculatorButtonItem.swift */; };
+		DBB0FA1F23C879E8005C9B22 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB0FA1E23C879E8005C9B22 /* ContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,13 +36,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		DB0548B4232208F700E582F8 /* CalculatorButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorButton.swift; sourceTree = "<group>"; };
-		DB0548B62322097900E582F8 /* CalculatorButtonRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorButtonRow.swift; sourceTree = "<group>"; };
-		DB0548B823220D0100E582F8 /* CalculatorButtonPad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorButtonPad.swift; sourceTree = "<group>"; };
 		DB3C6005231CA9A100427280 /* SwiftUIDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB3C6008231CA9A100427280 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB3C600A231CA9A100427280 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DB3C600C231CA9A100427280 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		DB3C600E231CA9A200427280 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DB3C6011231CA9A200427280 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DB3C6014231CA9A200427280 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -56,7 +49,8 @@
 		DB3C6026231CA9A300427280 /* SwiftUIDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftUIDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB3C602A231CA9A300427280 /* SwiftUIDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIDemoUITests.swift; sourceTree = "<group>"; };
 		DB3C602C231CA9A300427280 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DBE37757231E4DE600F445AA /* CalculatorButtonItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorButtonItem.swift; sourceTree = "<group>"; };
+		DBAD0FB223CF0931004B3DD0 /* CalculatorButtonItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorButtonItem.swift; sourceTree = "<group>"; };
+		DBB0FA1E23C879E8005C9B22 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,11 +101,8 @@
 		DB3C6007231CA9A100427280 /* SwiftUIDemo */ = {
 			isa = PBXGroup;
 			children = (
-				DB0548B4232208F700E582F8 /* CalculatorButton.swift */,
-				DBE37757231E4DE600F445AA /* CalculatorButtonItem.swift */,
-				DB0548B62322097900E582F8 /* CalculatorButtonRow.swift */,
-				DB0548B823220D0100E582F8 /* CalculatorButtonPad.swift */,
-				DB3C600C231CA9A100427280 /* ContentView.swift */,
+				DBAD0FB223CF0931004B3DD0 /* CalculatorButtonItem.swift */,
+				DBB0FA1E23C879E8005C9B22 /* ContentView.swift */,
 				DB3C6008231CA9A100427280 /* AppDelegate.swift */,
 				DB3C600A231CA9A100427280 /* SceneDelegate.swift */,
 				DB3C600E231CA9A200427280 /* Assets.xcassets */,
@@ -281,11 +272,8 @@
 			files = (
 				DB3C6009231CA9A100427280 /* AppDelegate.swift in Sources */,
 				DB3C600B231CA9A100427280 /* SceneDelegate.swift in Sources */,
-				DBE37758231E4DE600F445AA /* CalculatorButtonItem.swift in Sources */,
-				DB3C600D231CA9A100427280 /* ContentView.swift in Sources */,
-				DB0548B72322097900E582F8 /* CalculatorButtonRow.swift in Sources */,
-				DB0548B5232208F700E582F8 /* CalculatorButton.swift in Sources */,
-				DB0548B923220D0100E582F8 /* CalculatorButtonPad.swift in Sources */,
+				DBAD0FB323CF0931004B3DD0 /* CalculatorButtonItem.swift in Sources */,
+				DBB0FA1F23C879E8005C9B22 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,6 +443,7 @@
 				DEVELOPMENT_TEAM = 8S4NWFZC5J;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = SwiftUIDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -475,6 +464,7 @@
 				DEVELOPMENT_TEAM = 8S4NWFZC5J;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = SwiftUIDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
