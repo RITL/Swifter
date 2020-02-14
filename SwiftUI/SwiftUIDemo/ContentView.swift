@@ -8,6 +8,8 @@
 
 import SwiftUI
 
+// 第一种全局缩放适配SE,简单粗暴，不推荐
+let scale: CGFloat = UIScreen.main.bounds.width / 414
 
 struct ContentView: View {
     
@@ -27,6 +29,7 @@ struct ContentView: View {
             CalculatorButtonPad()//底部键盘
                 .padding(.bottom)
         }
+    .scaleEffect(scale)
     }
 }
 
@@ -38,6 +41,7 @@ struct ContentView_Previews: PreviewProvider {
         
         Group {
             ContentView()
+            ContentView().previewDevice("iPhone Xs Max")
             ContentView().previewDevice("iPhone SE")
         }
         
