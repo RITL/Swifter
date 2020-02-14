@@ -45,6 +45,12 @@ struct ContentView_Previews: PreviewProvider {
             ContentView().previewDevice("iPhone SE")
         }
         
+//        Text("+")
+//            .font(.title)
+//            .foregroundColor(.white)
+//            .background(Color.orange)
+//            .padding()
+//            .background(Color.blue)
     }
 }
 

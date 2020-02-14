@@ -24,6 +24,7 @@ struct CalculatorButton: View {
                 .frame(width: size.width, height: size.height)
                 .background(Color(backgroundColorName))
                 .cornerRadius(size.width / 2)
+            
         }
     }
 }
@@ -32,8 +33,40 @@ struct CalculatorButton: View {
 struct CalculatorButton_Previews: PreviewProvider {
     static var previews: some View {
         
-        CalculatorButton(title: "1", size: CGSize(width: 100, height: 100), backgroundColorName: "") {
+        //        Button(action: {
+        //
+        //        }) {
+        //               Text("1")
+        //                   .font(.system(size: 35))
+        //                   .foregroundColor(.white)
+        //                   .frame(width: 100, height: 100)
+        //                   .background(Color.red)
+        //                   .cornerRadius(50)
+        //        }
+        
+        ZStack {
             
-            }
+            Circle()
+                .foregroundColor(.red)
+                .frame(width: 100, height: 100)
+            
+            Text("1")
+                .font(.system(size: 35))
+                .foregroundColor(.white)
+                .frame(width: 100, height: 100)
+                .background(Color.red)
+                .cornerRadius(50)
+        }
+        
+        
+        
+        //        CalculatorButton(title: "1", size: CGSize(width: 100, height: 100), backgroundColorName: "") {
+        //
+        //        }.background(Color.red)
     }
 }
+
+//MARK: 使用 ZStack 实现 CalculatorButton
+
+
+
