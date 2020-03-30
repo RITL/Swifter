@@ -10,14 +10,17 @@ import SwiftUI
 
 struct CalculatorButtonRow: View {
     
+    @Binding var brain: CalculatorBrain
+    
     let row: [CalculatorButtonItem]
     var body: some View {
         HStack {
             ForEach(row, id: \.self) { item in
                 CalculatorButton(title: item.title,
                                  size: item.size,
-                                 backgroundColorName: item.backgroundName) {
-                                    print("Button: \(item.title)")
+                                 backgroundColorName: item.backgroundName)
+                {
+                    self.brain = self.brain.apply(item: item)
                 }
             }
         }
@@ -26,6 +29,7 @@ struct CalculatorButtonRow: View {
 
 struct CalculatorButtonRow_Previews: PreviewProvider {
     static var previews: some View {
-        CalculatorButtonRow(row: [.digit(1),.digit(2),.digit(3),.op(.plus)])
+//        CalculatorButtonRow(row: [.digit(1),.digit(2),.digit(3),.op(.plus)])
+        Text("123")
     }
 }

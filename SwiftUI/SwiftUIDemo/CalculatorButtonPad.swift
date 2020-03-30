@@ -10,6 +10,8 @@ import SwiftUI
 
 struct CalculatorButtonPad: View {
     
+    @Binding var brain: CalculatorBrain
+    
     let pad: [[CalculatorButtonItem]] = [
         
         [.command(.clear), .command(.flip),
@@ -24,7 +26,7 @@ struct CalculatorButtonPad: View {
     var body: some View {
         VStack(spacing: 9) {
             ForEach(pad, id: \.self) { row in
-                CalculatorButtonRow(row: row)
+                CalculatorButtonRow(brain: self.$brain, row: row)
             }
         }
     }
@@ -32,6 +34,7 @@ struct CalculatorButtonPad: View {
 
 struct CalculatorButtonPad_Previews: PreviewProvider {
     static var previews: some View {
-        CalculatorButtonPad()
+//        CalculatorButtonPad()
+        Text("123")
     }
 }
