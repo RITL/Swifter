@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import Combine
 
 // 第一种全局缩放适配SE,简单粗暴，不推荐
 let scale: CGFloat = UIScreen.main.bounds.width / 414
@@ -19,20 +20,33 @@ struct ContentView: View {
     /// 根据新的属性值计算出新的View,进行刷新
     @State private var brain: CalculatorBrain = .left("0")
     
+    
+    /// @ObservableObject 用于修饰class
+    @ObservedObject var model = CalculatorModel()
+    
+    
     var body: some View {
         
         VStack(spacing: 12) {
             
             Spacer()//充满屏的空白
             
-            Text(brain.output)//文本内容
+//            Text(brain.output)//文本内容
+            Button("操作履历:\(model.history.count)"){
+                print(self.model.history)
+            }
+            
+            Text(model.brain.output)//文本内容
                 .font(.system(size: 76))
                 .minimumScaleFactor(0.5)
                 .padding(.trailing, 24 * scale)
                 .frame(minWidth: 0, maxWidth: .infinity, alignment: .trailing)
             
-            CalculatorButtonPad(brain: $brain)//底部键盘
+//            CalculatorButtonPad(brain: $brain)//底部键盘
+//            CalculatorButtonPad(brain: $model.brain)//底部键盘
+            CalculatorButtonPad(model: model)
                 .padding(.bottom)
+            
         }
     }
 }
