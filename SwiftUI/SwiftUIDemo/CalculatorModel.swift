@@ -31,8 +31,48 @@ class CalculatorModel: ObservableObject {
     /// 回溯操作的数组
     @Published var history: [CalculatorButtonItem] = []
     
+    ///
+    /// 记录history数组中记录的操作步骤描述链接起来，作为履历的输出字符串
+    var historyDetail: String {
+        (history.map { $0.title }).joined()
+    }
+    
+    /// 暂时保存的 被回朔 的操作，暂存
+    var temporaryKept: [CalculatorButtonItem] = []
+    
+    /// 总数
+    var totalCount: Int {
+        history.count + temporaryKept.count
+    }
+    
+    /// 当前滑块表示的index值
+    /// 维护 history 和  temproaryKept
+    var slidingIndex: Float = 0 {
+        didSet {
+            keepHistory(upTo: Int(slidingIndex))
+        }
+    }
+    
+    
     func apply(_ item: CalculatorButtonItem) {
         brain = brain.apply(item: item)
         history.append(item)
+        
+        //将temporaryKept清空，并将 slidingIndex 设置到 最后一步
+    }
+    
+    
+    /// 根据 slidingIndex进行数据的重新分配
+    func keepHistory(upTo index: Int) {
+        precondition(index <= totalCount, "Out of index.")
+        
+        let total = history + temporaryKept
+        
+        history = Array(total[..<index])
+        temporaryKept = Array(total[index...])
+        
+        brain = history.reduce(CalculatorBrain.left("0")) { result, item in
+            result.apply(item: item)
+        }
     }
 }

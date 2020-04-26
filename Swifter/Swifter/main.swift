@@ -18,7 +18,7 @@ import Foundation
 //
 //print("\(arr1)")
 
-let sequece = "hello".map{ ($0,1) }
+//let sequece = "hello".map{ ($0,1) }
 
 //uniquingKeysWith
 
@@ -116,26 +116,45 @@ let sequece = "hello".map{ ($0,1) }
 //DispatchSemaphore(value: 1)
 //
 
-let multiTasks = BlockOperation()
+//let multiTasks = BlockOperation()
+//
+//multiTasks.completionBlock = {
+//    print("所有任务完成")
+//}
+//
+//multiTasks.addExecutionBlock {
+//    print("任务1");sleep(1)
+//}
+//
+//multiTasks.addExecutionBlock {
+//    print("任务2");sleep(2)
+//}
+//
+//multiTasks.addExecutionBlock {
+//    print("任务3");sleep(3)
+//}
+//
+//multiTasks.start()
+//
+//@objcMembers class A: NSObject {
+//
+//}
 
-multiTasks.completionBlock = {
-    print("所有任务完成")
-}
-
-multiTasks.addExecutionBlock {
-    print("任务1");sleep(1)
-}
-
-multiTasks.addExecutionBlock {
-    print("任务2");sleep(2)
-}
-
-multiTasks.addExecutionBlock {
-    print("任务3");sleep(3)
-}
-
-multiTasks.start()
-
-@objcMembers class A: NSObject {
+fileprivate extension String {
     
+    
+    /// subString
+    /// - Parameters:
+    ///   - start: 开始的位置
+    ///   - maxEnd: 最大的结束位置,如果不足，取中间的最大字符串
+    /// - Returns: 如果
+    func metroSubString(start: Int, maxEnd: Int) -> String {
+        // 开始的位数大于最大长度
+        guard start < count else { return "" }
+        // 截取字符串
+        return (self as NSString).substring(with: NSRange(location: start, length: min(count - 1, maxEnd)))
+    }
 }
+
+
+
