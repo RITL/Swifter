@@ -21,10 +21,13 @@ struct ToolButtonModifier: ViewModifier {
 
 struct PokemonInfoRow: View {
     
-    let model = PokemonViewModel.sample(id: 1)
+    let model: PokemonViewModel
+    //    let model = PokemonViewModel.sample(id: 1)
+    
+    @State var expanded: Bool
+    
     var body: some View {
         VStack {
-            
             HStack {
                 Image("Pokemon-\(model.id)")
                     .resizable()
@@ -43,8 +46,8 @@ struct PokemonInfoRow: View {
                 }
             }
             .padding(.top, 12)
-            
-            HStack(spacing: 20) {
+            Spacer()
+            HStack(spacing: expanded ? 20 : -30) {
                 Spacer()
                 Button(action: {
                     print("Fav")
@@ -66,10 +69,12 @@ struct PokemonInfoRow: View {
                 }
             }
             .padding(.bottom, 12)
+            .opacity(expanded ? 1.0 : 0.0)
+            .frame(maxHeight: expanded ? .infinity : 0)
         }
-        .frame(height: 120)
-        .padding(.leading, 40)
-        .padding(.trailing, 30)
+        .frame(height: expanded ? 120 : 80)
+        .padding(.leading, 23)
+        .padding(.trailing, 15)
         .background(
             ZStack {
                 RoundedRectangle(cornerRadius: 20)
@@ -81,14 +86,20 @@ struct PokemonInfoRow: View {
                             startPoint: .leading,
                             endPoint: .trailing)
                 )
-            }.padding(.horizontal)
-        )
-        
+            }
+        ).padding(.horizontal)
+            .onTapGesture {
+                self.expanded.toggle()
+        }
     }
 }
 
 struct PokemonInfoRow_Previews: PreviewProvider {
     static var previews: some View {
-        PokemonInfoRow()
+        VStack {
+            PokemonInfoRow(model: PokemonViewModel.sample(id: 1), expanded: false)
+            PokemonInfoRow(model: PokemonViewModel.sample(id: 21), expanded: true)
+            PokemonInfoRow(model: PokemonViewModel.sample(id: 25), expanded: false)
+        }
     }
 }
