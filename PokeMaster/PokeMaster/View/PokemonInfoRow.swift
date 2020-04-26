@@ -87,9 +87,17 @@ struct PokemonInfoRow: View {
                             endPoint: .trailing)
                 )
             }
-        ).padding(.horizontal)
+        )
+            .padding(.horizontal)
+            //            .animation(.default) //隐式动画
             .onTapGesture {
-                self.expanded.toggle()
+                withAnimation(
+                    .spring(
+                        response: 0.55,
+                        dampingFraction: 0.425,
+                        blendDuration: 0)) {
+                            self.expanded.toggle()
+                }
         }
     }
 }
