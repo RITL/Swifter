@@ -88,6 +88,7 @@
 		DBD2ED2F24557E5000E367FB /* PokemonList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD2ED2E24557E5000E367FB /* PokemonList.swift */; };
 		DBD2ED31245673F800E367FB /* PokemonInfoPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD2ED30245673F800E367FB /* PokemonInfoPanel.swift */; };
 		DBD2ED33245677FF00E367FB /* PokemonInfoPanelHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD2ED32245677FF00E367FB /* PokemonInfoPanelHeader.swift */; };
+		DBD2ED692456BFD000E367FB /* PokemonlnfoPanelAbilityList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD2ED682456BFD000E367FB /* PokemonlnfoPanelAbilityList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -174,6 +175,7 @@
 		DBD2ED2E24557E5000E367FB /* PokemonList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonList.swift; sourceTree = "<group>"; };
 		DBD2ED30245673F800E367FB /* PokemonInfoPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonInfoPanel.swift; sourceTree = "<group>"; };
 		DBD2ED32245677FF00E367FB /* PokemonInfoPanelHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonInfoPanelHeader.swift; sourceTree = "<group>"; };
+		DBD2ED682456BFD000E367FB /* PokemonlnfoPanelAbilityList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonlnfoPanelAbilityList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -376,6 +378,7 @@
 				DBD2ED2E24557E5000E367FB /* PokemonList.swift */,
 				DBD2ED30245673F800E367FB /* PokemonInfoPanel.swift */,
 				DBD2ED32245677FF00E367FB /* PokemonInfoPanelHeader.swift */,
+				DBD2ED682456BFD000E367FB /* PokemonlnfoPanelAbilityList.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -527,6 +530,7 @@
 				D1320B1A23178614006F02A6 /* PokemonViewModel.swift in Sources */,
 				DBD2ED31245673F800E367FB /* PokemonInfoPanel.swift in Sources */,
 				DBD2ED2F24557E5000E367FB /* PokemonList.swift in Sources */,
+				DBD2ED692456BFD000E367FB /* PokemonlnfoPanelAbilityList.swift in Sources */,
 				D1320AD823178614006F02A6 /* Helpers.swift in Sources */,
 				D1320B2223178614006F02A6 /* SceneDelegate.swift in Sources */,
 			);

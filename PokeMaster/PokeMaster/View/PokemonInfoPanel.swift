@@ -38,9 +38,23 @@ struct PokemonInfoPanel: View {
             topIndicator
             Header(model: model)
             pokemonDescription
-                .padding(.leading, 30)
-                .padding(.trailing, 30)
+            Divider()
+            AbilityList(
+                model: model,
+                abilityModels: abilities)
         }
+        .padding(
+            EdgeInsets(
+                top: 12,
+                leading: 30,
+                bottom: 30,
+                trailing: 30
+            )
+        )
+            
+            .background(Color.white)
+            .cornerRadius(20)
+            .fixedSize(horizontal: false, vertical: true)
     }
 }
 
