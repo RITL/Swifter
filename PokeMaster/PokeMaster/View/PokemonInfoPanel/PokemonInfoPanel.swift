@@ -33,8 +33,17 @@ struct PokemonInfoPanel: View {
             .fixedSize(horizontal: false, vertical: true)
     }
     
+    /// 用于测试
+    @State var darkBlur = false
+    
     var body: some View {
         VStack(spacing: 20) {
+            
+            Button(action: {
+                self.darkBlur.toggle()
+            }) {
+                Text("切换模糊效果")
+            }
             topIndicator
             Header(model: model)
             pokemonDescription
@@ -52,7 +61,7 @@ struct PokemonInfoPanel: View {
             )
         )
             
-            .blurBackground(style: .systemMaterial)
+            .blurBackground(style: darkBlur ? .systemMaterialDark : .systemMaterial)
             .cornerRadius(20)
             .fixedSize(horizontal: false, vertical: true)
     }

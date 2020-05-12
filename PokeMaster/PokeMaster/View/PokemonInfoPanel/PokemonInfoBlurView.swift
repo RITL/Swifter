@@ -13,8 +13,14 @@ struct BlurView: UIViewRepresentable {
     
     let style: UIBlurEffect.Style
     
-    func makeUIView(context: Context) -> UIView {
+    init(style: UIBlurEffect.Style) {
+        print("Init")
+        self.style = style
+    }
+    
+    func makeUIView(context: UIViewRepresentableContext<BlurView>) -> UIView {
         
+        print("makeUIView")
         let view = UIView(frame: .zero)
         view.backgroundColor = .clear
         
@@ -33,8 +39,16 @@ struct BlurView: UIViewRepresentable {
         return view
     }
     
-    func updateUIView(_ uiView: UIView, context: Context) {
+    func updateUIView(_ uiView: UIView, context: UIViewRepresentableContext<BlurView>) {
+//        print("UpdateUIView")
+        //针对获取的view,获得UIVisualEffectView
+        guard let blurView = (uiView.subviews.filter { $0 is UIVisualEffectView }).first else {
+            return
+        }
         
+        (blurView as! UIVisualEffectView).effect = UIBlurEffect(style: style)
+        
+        print("UpdateUIView - style = \(style)")
     }
 }
 
@@ -51,5 +65,6 @@ extension View {
 struct PokemonInfoBlurView_Previews: PreviewProvider {
     static var previews: some View {
         /*@START_MENU_TOKEN@*/Text("Hello, World!")/*@END_MENU_TOKEN@*/
+//        BlurView(style: .light)
     }
 }
