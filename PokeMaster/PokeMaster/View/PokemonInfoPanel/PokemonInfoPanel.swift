@@ -39,11 +39,11 @@ struct PokemonInfoPanel: View {
     var body: some View {
         VStack(spacing: 20) {
             
-            Button(action: {
-                self.darkBlur.toggle()
-            }) {
-                Text("切换模糊效果")
-            }
+//            Button(action: {
+//                self.darkBlur.toggle()
+//            }) {
+//                Text("切换模糊效果")
+//            }
             topIndicator
             Header(model: model)
             pokemonDescription

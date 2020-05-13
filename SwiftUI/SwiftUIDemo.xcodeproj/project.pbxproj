@@ -61,6 +61,7 @@
 		DB6D67C024319C20003364FA /* CalculatorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorModel.swift; sourceTree = "<group>"; };
 		DBAD0FB223CF0931004B3DD0 /* CalculatorButtonItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorButtonItem.swift; sourceTree = "<group>"; };
 		DBB0FA1E23C879E8005C9B22 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		DBD3AF63246B9FD1003D6F3F /* Combine.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = Combine.playground; path = ../../Combine.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +112,7 @@
 		DB3C6007231CA9A100427280 /* SwiftUIDemo */ = {
 			isa = PBXGroup;
 			children = (
+				DBD3AF63246B9FD1003D6F3F /* Combine.playground */,
 				DB6D67C024319C20003364FA /* CalculatorModel.swift */,
 				DB3DF70923FD320600D62B78 /* CalculatorBrain.swift */,
 				DB1E14CC23F5324B002412FB /* CalculatorButton.swift */,
