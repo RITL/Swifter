@@ -44,12 +44,12 @@ struct PokemonList: View {
         }
         // overlay是在当前View上方添加一层另外的View.
         // 行为和ZStack相似，但是overlay会尊重下方的原有View的布局，而不像ZStack中的view那样相互没有约束。
-        .overlay(
-            VStack{
-                Spacer()
-                PokemonInfoPanel(model: .sample(id: 1))
-            }.edgesIgnoringSafeArea(.bottom)
-        )
+//        .overlay(
+//            VStack{
+//                Spacer()
+//                PokemonInfoPanel(model: .sample(id: 1))
+//            }.edgesIgnoringSafeArea(.bottom)
+//        )
     }
 }
 

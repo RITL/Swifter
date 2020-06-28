@@ -1,9 +1,9 @@
 //
 //  SceneDelegate.swift
-//  PokeMaster
+//  CreatingAndCombiningViews
 //
-//  Created by Wang Wei on 2019/08/28.
-//  Copyright © 2019 OneV's Den. All rights reserved.
+//  Created by YueWen on 2020/6/28.
+//  Copyright © 2020 YueWen. All rights reserved.
 //
 
 import UIKit
@@ -20,7 +20,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
 
         // Create the SwiftUI view that provides the window contents.
-        let contentView = MainTab().environmentObject(Store())
+        let contentView = ContentView()
 
         // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {

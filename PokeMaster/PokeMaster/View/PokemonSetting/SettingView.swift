@@ -33,6 +33,11 @@ class Settings: ObservableObject {
 
 struct SettingView: View {
     
+    @EnvironmentObject var store: Store
+    var settingBinding: Binding<AppState.Settings> {
+        $store.appState.settings
+    }
+    
     @ObservedObject var settings = Settings()
     
     var body: some View {
@@ -72,15 +77,15 @@ struct SettingView: View {
     /// 选项
     var optionalSection: some View {
         Section(header: Text("选项")) {
-            Toggle(isOn: $settings.showEnglishName) {
+            Toggle(isOn: settingBinding.showEnglishName) {
                 Text("显示英文名")
             }
-            Picker(selection: $settings.sorting, label: Text("排序方式")) {
-                ForEach(Settings.Sorting.allCases, id: \.self) {
+            Picker(selection: settingBinding.sorting, label: Text("排序方式")) {
+                ForEach(AppState.Settings.Sorting.allCases, id: \.self) {
                     Text($0.text)
                 }
             }
-            Toggle(isOn: $settings.showFavoriteOnly) {
+            Toggle(isOn: settingBinding.showFavoriteOnly) {
                 Text("只显示收藏")
             }
         }
@@ -100,7 +105,8 @@ struct SettingView: View {
 }
 
 
-extension Settings.Sorting {
+extension AppState.Settings.Sorting {
+    
     var text: String {
         switch self {
         case .id: return "ID"
@@ -124,7 +130,10 @@ extension Settings.AccountBehavior {
 
 struct SettingView_Previews: PreviewProvider {
     static var previews: some View {
-        SettingView()
+        
+        let store = Store()
+        store.appState.settings.sorting = .color
+        return SettingView().environmentObject(store)
     }
 }
 
