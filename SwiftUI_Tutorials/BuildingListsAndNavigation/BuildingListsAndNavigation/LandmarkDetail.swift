@@ -9,35 +9,39 @@
 import SwiftUI
 
 struct LandmarkDetail: View {
+    var landmark: Landmark
+    
     var body: some View {
         VStack {
-            MapView()
+            MapView(coordinate: landmark.locationCoordinate)
                 .edgesIgnoringSafeArea(.top)
                 .frame(height: 300)
             
-            CircleImage()
+            CircleImage(image: landmark.image)
                 .offset(y: -130)
                 .padding(.bottom, -130)
             
             VStack(alignment: .leading) {
-                Text("上实中心")
+                Text(landmark.name)
                     .font(.title)
                 HStack(alignment: .top) {
-                    Text("崂山区香港东路195号")
+                    Text(landmark.park)
                         .font(.subheadline)
                     Spacer()
-                    Text("青岛")
+                    Text(landmark.state)
                         .font(.subheadline)
                 }
             }
             .padding()
+            
             Spacer()
         }
+        .navigationBarTitle(Text(landmark.name), displayMode: .inline)
     }
 }
 
 struct LandmarkDetail_Previews: PreviewProvider {
     static var previews: some View {
-        LandmarkDetail()
+        LandmarkDetail(landmark: landmarkData[0])
     }
 }
