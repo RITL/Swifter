@@ -17,6 +17,16 @@
 		DB073F1124A835F000F07372 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB073F1024A835F000F07372 /* MapView.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		DB073F3E24A83A8700F07372 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DB073F3A24A83A8700F07372 /* BuildingListsAndNavigation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DB073F1B24A83A4C00F07372;
+			remoteInfo = BuildingListsAndNavigation;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		DB073EF724A82FDA00F07372 /* CreatingAndCombiningViews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CreatingAndCombiningViews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB073EFA24A82FDA00F07372 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -26,8 +36,9 @@
 		DB073F0324A82FDE00F07372 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DB073F0624A82FDE00F07372 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DB073F0824A82FDE00F07372 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DB073F0E24A8346700F07372 /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
-		DB073F1024A835F000F07372 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		DB073F0E24A8346700F07372 /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CircleImage.swift; path = ../../BuildingListsAndNavigation/BuildingListsAndNavigation/CircleImage.swift; sourceTree = "<group>"; };
+		DB073F1024A835F000F07372 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MapView.swift; path = ../../BuildingListsAndNavigation/BuildingListsAndNavigation/MapView.swift; sourceTree = "<group>"; };
+		DB073F3A24A83A8700F07372 /* BuildingListsAndNavigation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = BuildingListsAndNavigation.xcodeproj; path = ../BuildingListsAndNavigation/BuildingListsAndNavigation.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +55,7 @@
 		DB073EEE24A82FDA00F07372 = {
 			isa = PBXGroup;
 			children = (
+				DB073F3A24A83A8700F07372 /* BuildingListsAndNavigation.xcodeproj */,
 				DB073EF924A82FDA00F07372 /* CreatingAndCombiningViews */,
 				DB073EF824A82FDA00F07372 /* Products */,
 			);
@@ -79,6 +91,14 @@
 				DB073F0324A82FDE00F07372 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		DB073F3B24A83A8700F07372 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DB073F3F24A83A8700F07372 /* BuildingListsAndNavigation.app */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,12 +147,28 @@
 			mainGroup = DB073EEE24A82FDA00F07372;
 			productRefGroup = DB073EF824A82FDA00F07372 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = DB073F3B24A83A8700F07372 /* Products */;
+					ProjectRef = DB073F3A24A83A8700F07372 /* BuildingListsAndNavigation.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				DB073EF624A82FDA00F07372 /* CreatingAndCombiningViews */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		DB073F3F24A83A8700F07372 /* BuildingListsAndNavigation.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = BuildingListsAndNavigation.app;
+			remoteRef = DB073F3E24A83A8700F07372 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		DB073EF524A82FDA00F07372 /* Resources */ = {

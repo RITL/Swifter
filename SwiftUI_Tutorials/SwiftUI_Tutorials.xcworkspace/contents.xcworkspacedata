@@ -4,4 +4,7 @@
    <FileRef
       location = "group:CreatingAndCombiningViews/CreatingAndCombiningViews.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:CreatingAndCombiningViews/../BuildingListsAndNavigation/BuildingListsAndNavigation.xcodeproj">
+   </FileRef>
 </Workspace>
