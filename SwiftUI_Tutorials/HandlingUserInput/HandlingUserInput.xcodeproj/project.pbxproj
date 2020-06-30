@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DB09C50824AAD5FA00D13EA4 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB09C50724AAD5FA00D13EA4 /* UserData.swift */; };
 		DB294E8224A995F1002DF669 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB294E8124A995F1002DF669 /* AppDelegate.swift */; };
 		DB294E8424A995F1002DF669 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB294E8324A995F1002DF669 /* SceneDelegate.swift */; };
 		DB294E8824A995F4002DF669 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB294E8724A995F4002DF669 /* Assets.xcassets */; };
@@ -36,6 +37,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DB09C50724AAD5FA00D13EA4 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		DB294E7E24A995F1002DF669 /* HandlingUserInput.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HandlingUserInput.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB294E8124A995F1002DF669 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB294E8324A995F1002DF669 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 			children = (
 				DB294ECE24A9983A002DF669 /* Data.swift */,
 				DB294ECF24A9983A002DF669 /* Landmark.swift */,
+				DB09C50724AAD5FA00D13EA4 /* UserData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -248,6 +251,7 @@
 				DB294EBE24A99664002DF669 /* LandmarkList.swift in Sources */,
 				DB294E8424A995F1002DF669 /* SceneDelegate.swift in Sources */,
 				DB294EBB24A99664002DF669 /* LandmarkDetail.swift in Sources */,
+				DB09C50824AAD5FA00D13EA4 /* UserData.swift in Sources */,
 				DB294EDE24A998C1002DF669 /* CircleImage.swift in Sources */,
 				DB294ED424A9983A002DF669 /* Data.swift in Sources */,
 				DB294ED824A9983A002DF669 /* ContentView.swift in Sources */,
