@@ -38,6 +38,7 @@
 		DB09C55F24AADC2700D13EA4 /* HexagonParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB09C55E24AADC2700D13EA4 /* HexagonParameters.swift */; };
 		DB09C56124AAE72600D13EA4 /* Badge.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB09C56024AAE72600D13EA4 /* Badge.swift */; };
 		DB09C56324AB0E0600D13EA4 /* BadgeSymbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB09C56224AB0E0600D13EA4 /* BadgeSymbol.swift */; };
+		DB09C56524AB121E00D13EA4 /* RotatedBadgeSymbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB09C56424AB121E00D13EA4 /* RotatedBadgeSymbol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +75,7 @@
 		DB09C55E24AADC2700D13EA4 /* HexagonParameters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HexagonParameters.swift; sourceTree = "<group>"; };
 		DB09C56024AAE72600D13EA4 /* Badge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Badge.swift; sourceTree = "<group>"; };
 		DB09C56224AB0E0600D13EA4 /* BadgeSymbol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeSymbol.swift; sourceTree = "<group>"; };
+		DB09C56424AB121E00D13EA4 /* RotatedBadgeSymbol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotatedBadgeSymbol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 				DB09C53424AADB9F00D13EA4 /* LandmarkList.swift */,
 				DB09C55E24AADC2700D13EA4 /* HexagonParameters.swift */,
 				DB09C56224AB0E0600D13EA4 /* BadgeSymbol.swift */,
+				DB09C56424AB121E00D13EA4 /* RotatedBadgeSymbol.swift */,
 				DB09C55C24AADBBF00D13EA4 /* BadgeBackground.swift */,
 				DB09C56024AAE72600D13EA4 /* Badge.swift */,
 				DB09C51B24AADB1700D13EA4 /* Assets.xcassets */,
@@ -273,6 +276,7 @@
 				DB09C55B24AADB9F00D13EA4 /* LandmarkRow.swift in Sources */,
 				DB09C51A24AADB1500D13EA4 /* ContentView.swift in Sources */,
 				DB09C55A24AADB9F00D13EA4 /* CircleImage.swift in Sources */,
+				DB09C56524AB121E00D13EA4 /* RotatedBadgeSymbol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
